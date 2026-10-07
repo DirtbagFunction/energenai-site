@@ -136,8 +136,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       EnergenAI
     </a>
     <div class="links">
-      <a href="#services">Services</a>
+      <a href="#building">Building</a>
+      <a href="#method">Research</a>
       <a href="#wireless">Wireless Power</a>
+      <a href="#services">Services</a>
       <a href="#ai">Applied AI</a>
       <a href="#government">Government</a>
       <a href="#contact">Contact</a>
@@ -151,10 +153,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <div>
         <div class="eyebrow"><i></i>Research &amp; engineering · Michigan, USA</div>
         <h1>Power without wires.<br><span>Intelligence built in.</span></h1>
-        <p class="lede">EnergenAI LLC develops patent-pending millimeter-wave wireless power technology and the AI systems that steer it — and brings the same engineering to applied AI work for commercial and government customers.</p>
+        <p class="lede">EnergenAI LLC is an AI research and engineering company. We build generative-agent systems, apply a measurement-first AI methodology to energy research — starting with our patent-pending millimeter-wave wireless power system — and bring the same engineering to commercial and government customers.</p>
         <div class="cta">
-          <a class="btn primary" href="#services">Services &amp; pricing</a>
-          <a class="btn ghost" href="#wireless">The wireless power system</a>
+          <a class="btn primary" href="#building">What we're building</a>
+          <a class="btn ghost" href="#services">Services &amp; pricing</a>
         </div>
       </div>
       <svg class="beam" viewBox="0 0 420 360" role="img" aria-label="A phased-array transmitter steering energy beams to devices">
@@ -189,6 +191,85 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         <text x="300" y="138" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">RX · tracked</text>
         <text x="296" y="318" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">RX · tracked</text>
       </svg>
+    </div>
+  </section>
+
+  <section id="building">
+    <div class="wrap split">
+      <div>
+        <div class="kicker">What we're building</div>
+        <h2>npc-minds: generative agents that remember, plan and talk to each other</h2>
+        <p class="sub">An engine that gives every character in a simulated world its own mind, after Stanford's <em>Generative Agents</em> research (Park et al., 2023). Each agent keeps a memory stream, reflects on what it has lived through, plans its day, and passes news to the agents it meets - so information spreads through a population the way it does through a town.</p>
+        <ul class="ticks">
+          <li><b>Lives, not just characters.</b> Every agent is born from an archetype with sampled Big Five personality traits; when it dies, the slot is reborn as someone new. A ledger keeps every life for study.</li>
+          <li><b>Built for research.</b> Interviews that write nothing back, a grounding check that flags any claim an agent's memories don't support, information-diffusion experiments, relationship networks and trait-versus-outcome statistics.</li>
+          <li><b>Private by design.</b> Text a human typed never leaves the machine - enforced in code and proven by a test - while the agents' own thinking can use hosted models.</li>
+          <li><b>Runs on almost nothing.</b> A cascade across many free hosted models, batching to stretch every quota, and a small local model as the last resort, so a population keeps thinking at near-zero cost.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <table class="spec">
+          <tr><td>Use cases</td><td>Game worlds with living populations; social and psychological simulation research</td></tr>
+          <tr><td>Agent loop</td><td>Observe → rate importance → reflect with cited evidence → plan → converse</td></tr>
+          <tr><td>Memory retrieval</td><td>Recency + importance + relevance, as in the paper</td></tr>
+          <tr><td>Models</td><td>Hosted model cascade with rate, quota and model-rotation handling; local fallback</td></tr>
+          <tr><td>Built with</td><td>Claude - architecture, code and test-driven development</td></tr>
+          <tr><td>Status</td><td>Working engine running a live simulated city; research tooling in active development</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="wrap">
+      <div class="kicker">Research methodology</div>
+      <h2>Measure the artifact, not the exit code</h2>
+      <p class="sub">AI systems fail quietly: a pipeline reports success while the output is wrong. Our method treats every result as unproven until it has been measured - the discipline we apply to software, and now to energy research.</p>
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Verify outputs directly</h3>
+          <p>Every stage is checked against what it produced, not what it reported. A green checkmark is not evidence; a measured file, frame or reading is.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Calibrated AI judgement</h3>
+          <p>AI evaluators get forced-choice questions instead of yes/no (which invites agreement bias), and every automated check carries its own measured noise floor, so a warning means something.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>Applied to energy</h3>
+          <p>For wireless power, AI-assisted modelling explores the design space - frequency band, path loss through real materials, rectifier efficiency, beam-steering control - and every model is held to bench measurements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wireless">
+    <div class="wrap split">
+      <div>
+        <div class="kicker">Flagship R&amp;D</div>
+        <h2>Compact wireless power for battery-operated devices <span class="badge">Patent pending</span></h2>
+        <p class="sub">Inductive charging only works when a device sits on a pad. EnergenAI's system is designed to deliver power across a room: a phased-array transmitter forms steerable millimeter-wave beams, and a compact receiver inside the device converts them back to regulated DC.</p>
+        <ul class="ticks">
+          <li><b>Beam-steered delivery.</b> An electronically steerable phased array directs energy at authenticated receivers and follows them as they move.</li>
+          <li><b>AI-driven control.</b> The control system tracks devices and continuously tunes beam direction, frequency and power for efficiency and safety.</li>
+          <li><b>Safety by design.</b> Designed around FCC and ICNIRP exposure guidance, with thermal management and frequency hopping to avoid interference.</li>
+          <li><b>Built to embed.</b> A compact receiver suited to phones, IoT sensors, wearables and smart-home devices.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <table class="spec">
+          <tr><td>Frequency band</td><td class="mono">95–300 GHz (millimeter-wave)</td></tr>
+          <tr><td>Design range</td><td>Up to 3 m</td></tr>
+          <tr><td>Transmitter</td><td>Gallium nitride (GaN) power amplification, PLL-stabilized oscillator, patch-antenna phased array</td></tr>
+          <tr><td>Receiver</td><td>Compact antenna array, Schottky high-frequency rectifier, buck-boost regulation</td></tr>
+          <tr><td>Output</td><td class="mono">5 V · 9 V · 12 V DC</td></tr>
+          <tr><td>Input</td><td>Standard household AC (110 / 220 V)</td></tr>
+          <tr><td>Status</td><td>Research &amp; development · patent pending</td></tr>
+        </table>
+        <p class="note">Figures are design targets for the system under development, not certified product specifications.</p>
+      </div>
     </div>
   </section>
 
@@ -230,34 +311,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         </div>
       </div>
       <p class="note">Need something else - a prototype, an R&amp;D study, a custom pipeline? <a href="#contact">Ask for a quote.</a></p>
-    </div>
-  </section>
-
-  <section id="wireless">
-    <div class="wrap split">
-      <div>
-        <div class="kicker">Flagship R&amp;D</div>
-        <h2>Compact wireless power for battery-operated devices <span class="badge">Patent pending</span></h2>
-        <p class="sub">Inductive charging only works when a device sits on a pad. EnergenAI's system is designed to deliver power across a room: a phased-array transmitter forms steerable millimeter-wave beams, and a compact receiver inside the device converts them back to regulated DC.</p>
-        <ul class="ticks">
-          <li><b>Beam-steered delivery.</b> An electronically steerable phased array directs energy at authenticated receivers and follows them as they move.</li>
-          <li><b>AI-driven control.</b> The control system tracks devices and continuously tunes beam direction, frequency and power for efficiency and safety.</li>
-          <li><b>Safety by design.</b> Designed around FCC and ICNIRP exposure guidance, with thermal management and frequency hopping to avoid interference.</li>
-          <li><b>Built to embed.</b> A compact receiver suited to phones, IoT sensors, wearables and smart-home devices.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <table class="spec">
-          <tr><td>Frequency band</td><td class="mono">95–300 GHz (millimeter-wave)</td></tr>
-          <tr><td>Design range</td><td>Up to 3 m</td></tr>
-          <tr><td>Transmitter</td><td>Gallium nitride (GaN) power amplification, PLL-stabilized oscillator, patch-antenna phased array</td></tr>
-          <tr><td>Receiver</td><td>Compact antenna array, Schottky high-frequency rectifier, buck-boost regulation</td></tr>
-          <tr><td>Output</td><td class="mono">5 V · 9 V · 12 V DC</td></tr>
-          <tr><td>Input</td><td>Standard household AC (110 / 220 V)</td></tr>
-          <tr><td>Status</td><td>Research &amp; development · patent pending</td></tr>
-        </table>
-        <p class="note">Figures are design targets for the system under development, not certified product specifications.</p>
-      </div>
     </div>
   </section>
 
