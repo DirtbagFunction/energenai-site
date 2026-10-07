@@ -95,7 +95,34 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:9px;width:12px;heigh
 /* contact */
 .contact{text-align:center}
 .contact .sub{margin:0 auto 28px}
-.mail{display:inline-block;font-size:clamp(18px,2.6vw,24px);font-weight:600;border:1px solid var(--line);border-radius:12px;padding:16px 26px;background:var(--card)}
+/* offers */
+.offer h3{font-size:19px}
+.price{margin:6px 0 12px;color:var(--muted);font-size:14px}
+.price b{font-size:26px;color:var(--text);letter-spacing:-.5px}
+.offer ul.ticks{margin-top:16px;gap:8px;font-size:14.5px}
+
+/* form */
+.form{max-width:640px;margin:0 auto;text-align:left;display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.row2{grid-template-columns:1fr}}
+.form label{display:grid;gap:6px;font-size:13.5px;color:var(--muted)}
+.form .opt{font-size:12px;opacity:.8}
+.form input,.form select,.form textarea{font:inherit;font-size:15px;color:var(--text);background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:11px 12px;outline:none;width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--accent)}
+.form textarea{resize:vertical}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.hold{position:relative;overflow:hidden;width:100%;padding:15px;border-radius:10px;border:1px dashed rgba(54,226,196,.5);
+  background:var(--card);color:var(--text);font:600 15px Inter,system-ui,sans-serif;cursor:pointer;user-select:none;
+  -webkit-user-select:none;touch-action:none;-webkit-touch-callout:none}
+.hold .fill{position:absolute;inset:0;width:0;background:rgba(54,226,196,.22)}
+.hold .label{position:relative}
+.hold.ok{border-style:solid;border-color:var(--accent);color:var(--accent)}
+.form .btn{border:0;cursor:pointer;font-family:inherit}
+.form .btn:disabled{opacity:.45;cursor:not-allowed;filter:none}
+.status{min-height:22px;font-size:14px;color:var(--muted);text-align:center}
+.status.err{color:#ff8a8a}.status.good{color:var(--accent)}
+
 footer{padding:30px 0;color:var(--muted);font-size:13.5px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 </style>
@@ -109,6 +136,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       EnergenAI
     </a>
     <div class="links">
+      <a href="#services">Services</a>
       <a href="#wireless">Wireless Power</a>
       <a href="#ai">Applied AI</a>
       <a href="#government">Government</a>
@@ -125,8 +153,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         <h1>Power without wires.<br><span>Intelligence built in.</span></h1>
         <p class="lede">EnergenAI LLC develops patent-pending millimeter-wave wireless power technology and the AI systems that steer it — and brings the same engineering to applied AI work for commercial and government customers.</p>
         <div class="cta">
-          <a class="btn primary" href="#wireless">The wireless power system</a>
-          <a class="btn ghost" href="#government">Capability statement</a>
+          <a class="btn primary" href="#services">Services &amp; pricing</a>
+          <a class="btn ghost" href="#wireless">The wireless power system</a>
         </div>
       </div>
       <svg class="beam" viewBox="0 0 420 360" role="img" aria-label="A phased-array transmitter steering energy beams to devices">
@@ -161,6 +189,47 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         <text x="300" y="138" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">RX · tracked</text>
         <text x="296" y="318" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">RX · tracked</text>
       </svg>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="kicker">Services</div>
+      <h2>What we can build for you</h2>
+      <p class="sub">Fixed-scope packages with a written quote before any work starts. Prices are starting points; the quote is what you pay.</p>
+      <div class="grid g3">
+        <div class="card offer">
+          <h3>AI music video</h3>
+          <div class="price">from <b>$450</b> <span>/ track</span></div>
+          <p>A complete, beat-synced music video for your song: original AI-generated visuals in a look we design with you, cut to the transients so every hit lands, with optional film or VHS treatment.</p>
+          <ul class="ticks">
+            <li>Style frames for approval first</li>
+            <li>1080p delivery, phone-friendly encode</li>
+            <li>Two rounds of revisions</li>
+          </ul>
+        </div>
+        <div class="card offer">
+          <h3>Private AI setup</h3>
+          <div class="price">from <b>$1,500</b></div>
+          <p>Language models and image generation running on your own hardware, so client data never leaves the building: installed, tuned to your machine and documented for your staff.</p>
+          <ul class="ticks">
+            <li>Hardware sizing advice up front</li>
+            <li>Chat assistant over your own documents</li>
+            <li>30 days of support</li>
+          </ul>
+        </div>
+        <div class="card offer">
+          <h3>AI automation &amp; bots</h3>
+          <div class="price">from <b>$750</b></div>
+          <p>Assistants and bots that do real work: Telegram or Discord bots, AI agents with memory, document and inbox workflows, and integrations with the tools you already use.</p>
+          <ul class="ticks">
+            <li>Built around one concrete task you name</li>
+            <li>Runs unattended, with monitoring</li>
+            <li>Handover and documentation</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">Need something else - a prototype, an R&amp;D study, a custom pipeline? <a href="#contact">Ask for a quote.</a></p>
     </div>
   </section>
 
@@ -226,7 +295,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         <div class="fact"><div class="k">Entity</div><div class="v">EnergenAI LLC</div></div>
         <div class="fact"><div class="k">UEI</div><div class="v mono">LBZFEH87W746</div></div>
         <div class="fact"><div class="k">Organized</div><div class="v">Michigan LLC</div></div>
-        <div class="fact"><div class="k">Contact</div><div class="v"><a href="mailto:j.chamberlain@energenai.org">Email us</a></div></div>
+        <div class="fact"><div class="k">Contact</div><div class="v"><a href="#contact">Contact form</a></div></div>
       </div>
       <div class="grid g2">
         <div class="card">
@@ -254,8 +323,29 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <div class="wrap">
       <div class="kicker">Contact</div>
       <h2>Let's talk</h2>
-      <p class="sub">Partnerships, licensing, research collaboration or contracting inquiries.</p>
-      <a class="mail" href="mailto:j.chamberlain@energenai.org">j.chamberlain@energenai.org</a>
+      <p class="sub">Projects, quotes, partnerships, licensing or contracting inquiries. We reply within two business days.</p>
+      <form id="cf" class="form" novalidate>
+        <div class="row2">
+          <label>Name<input name="name" autocomplete="name" maxlength="120" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
+        </div>
+        <div class="row2">
+          <label><span>Organization <span class="opt">(optional)</span></span><input name="org" autocomplete="organization" maxlength="160"></label>
+          <label>Topic
+            <select name="topic">
+              <option>AI music video</option><option>Private AI setup</option><option>AI automation &amp; bots</option>
+              <option>Wireless power / licensing</option><option>Government contracting</option><option>Something else</option>
+            </select>
+          </label>
+        </div>
+        <label>Message<textarea name="message" rows="5" maxlength="5000" required></textarea></label>
+        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <button type="button" id="hold" class="hold" aria-label="Press and hold to verify you're human">
+          <span class="fill"></span><span class="label">Press &amp; hold to verify</span>
+        </button>
+        <button type="submit" id="send" class="btn primary" disabled>Send message</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
     </div>
   </section>
 </main>
@@ -266,6 +356,111 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <span class="mono">UEI LBZFEH87W746</span>
   </div>
 </footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear()</script>
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* Contact form. The company address is NOT on this page: messages go to a Google Apps Script that mails the
+   account it was deployed from. A press-and-hold check gates sending; while you hold, the browser also solves a
+   small proof-of-work the server re-checks (cheap once for a person, costly at spam volume). */
+const FORM_URL = "";                                  // the Apps Script web-app URL (…/exec) once deployed
+const HOLD_MS = 1500, PREFIX = "0000";
+const T0 = Date.now();
+const form = document.getElementById("cf"), hold = document.getElementById("hold"),
+      send = document.getElementById("send"), status = document.getElementById("status"),
+      fill = hold.querySelector(".fill"), label = hold.querySelector(".label");
+let proof = null, held = 0, timer = null, start = 0, mined = null;
+
+function say(t, cls) { status.textContent = t; status.className = "status " + (cls || ""); }
+
+// SHA-256 in plain JS (crypto.subtle needs HTTPS; this works everywhere)
+function sha256(msg) {
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,
+    0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,
+    0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+    0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,
+    0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,
+    0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const b = new TextEncoder().encode(msg), l = b.length, n = ((l + 9 + 63) >> 6) << 6, m = new Uint8Array(n);
+  m.set(b); m[l] = 0x80; const v = new DataView(m.buffer); v.setUint32(n - 4, l * 8);
+  let H = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const w = new Uint32Array(64), r = (x, k) => (x >>> k) | (x << (32 - k));
+  for (let o = 0; o < n; o += 64) {
+    for (let i = 0; i < 16; i++) w[i] = v.getUint32(o + i * 4);
+    for (let i = 16; i < 64; i++) {
+      const s0 = r(w[i-15],7) ^ r(w[i-15],18) ^ (w[i-15] >>> 3), s1 = r(w[i-2],17) ^ r(w[i-2],19) ^ (w[i-2] >>> 10);
+      w[i] = (w[i-16] + s0 + w[i-7] + s1) | 0;
+    }
+    let [a, bb, c, d, e, f, g, h] = H;
+    for (let i = 0; i < 64; i++) {
+      const t1 = (h + (r(e,6) ^ r(e,11) ^ r(e,25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) | 0;
+      const t2 = ((r(a,2) ^ r(a,13) ^ r(a,22)) + ((a & bb) ^ (a & c) ^ (bb & c))) | 0;
+      h = g; g = f; f = e; e = (d + t1) | 0; d = c; c = bb; bb = a; a = (t1 + t2) | 0;
+    }
+    H = H.map((x, i) => (x + [a, bb, c, d, e, f, g, h][i]) | 0);
+  }
+  return H.map(x => (x >>> 0).toString(16).padStart(8, "0")).join("");
+}
+
+// search for a nonce in small slices so the hold animation stays smooth
+function mine(email) {
+  let nonce = 0, stop = false;
+  const job = { done: null, cancel() { stop = true; } };
+  (function step() {
+    if (stop) return;
+    for (let i = 0; i < 400; i++, nonce++) {
+      if (sha256(T0 + ":" + nonce + ":" + email).startsWith(PREFIX)) { job.done = nonce; return; }
+    }
+    setTimeout(step, 0);
+  })();
+  return job;
+}
+
+function reset(msg) {
+  clearInterval(timer); timer = null; held = 0; proof = null; if (mined) mined.cancel(); mined = null;
+  fill.style.width = "0"; hold.classList.remove("ok"); label.textContent = "Press & hold to verify"; send.disabled = true;
+  if (msg) say(msg, "err");
+}
+
+function down(ev) {
+  ev.preventDefault();
+  if (proof) return;
+  const email = form.email.value.trim().toLowerCase();
+  if (!email) { say("Enter your email first, then hold the button.", "err"); return; }
+  say("");
+  start = Date.now(); mined = mine(email); label.textContent = "Keep holding…";
+  timer = setInterval(() => {
+    held = Date.now() - start;
+    fill.style.width = Math.min(100, held / HOLD_MS * 100) + "%";
+    if (held >= HOLD_MS && mined && mined.done !== null) {
+      clearInterval(timer); timer = null;
+      proof = { nonce: mined.done, hold: held, email };
+      hold.classList.add("ok"); label.textContent = "Verified - you can send"; send.disabled = false;
+    }
+  }, 30);
+}
+function up() { if (timer) reset(held < HOLD_MS ? "Hold a little longer - about two seconds." : ""); }
+
+hold.addEventListener("pointerdown", down);
+["pointerup", "pointerleave", "pointercancel"].forEach(t => hold.addEventListener(t, up));
+hold.addEventListener("keydown", e => { if ((e.key === " " || e.key === "Enter") && !e.repeat && !timer) down(e); });
+hold.addEventListener("keyup", e => { if (e.key === " " || e.key === "Enter") up(); });
+hold.addEventListener("contextmenu", e => e.preventDefault());
+form.email.addEventListener("input", () => { if (proof) reset(); });   // the proof is bound to the address
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (!proof) { say("Please press and hold the verify button first.", "err"); return; }
+  if (!FORM_URL) { say("The form is being connected - please check back shortly.", "err"); return; }
+  const f = Object.fromEntries(new FormData(form).entries());
+  send.disabled = true; say("Sending…");
+  try {
+    const r = await fetch(FORM_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ ...f, ts: T0, nonce: proof.nonce, hold: proof.hold }) });
+    const j = await r.json();
+    if (j.ok) { form.reset(); reset(); say("Thanks - your message is on its way. We'll reply within two business days.", "good"); }
+    else { reset(j.error || "Couldn't send - please try again."); }
+  } catch (err) { reset("Couldn't reach the server - please try again in a moment."); }
+});
+</script>
 </body>
 </html>
