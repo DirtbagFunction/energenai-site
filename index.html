@@ -95,6 +95,15 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:9px;width:12px;heigh
 /* contact */
 .contact{text-align:center}
 .contact .sub{margin:0 auto 28px}
+/* publications */
+ul.pubs{list-style:none;display:grid;gap:16px}
+ul.pubs .d{display:block;font:12px "JetBrains Mono",monospace;color:var(--muted);margin-bottom:2px}
+ul.pubs a{color:var(--text);font-weight:500}
+ul.pubs a:hover{color:var(--accent)}
+.stat{text-align:center;padding:20px}
+.stat .n{font-size:30px;font-weight:700;letter-spacing:-.5px;color:var(--accent)}
+.stat .l{color:var(--muted);font-size:14px}
+
 /* offers */
 .offer h3{font-size:19px}
 .price{margin:6px 0 12px;color:var(--muted);font-size:14px}
@@ -137,7 +146,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     </a>
     <div class="links">
       <a href="#building">Building</a>
-      <a href="#method">Research</a>
+      <a href="#method">Method</a>
+      <a href="#research">Research</a>
       <a href="#wireless">Wireless Power</a>
       <a href="#services">Services</a>
       <a href="#ai">Applied AI</a>
@@ -242,6 +252,36 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
           <p>For wireless power, AI-assisted modelling explores the design space - frequency band, path loss through real materials, rectifier efficiency, beam-steering control - and every model is held to bench measurements.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <div class="kicker">Research &amp; publications</div>
+      <h2>TIAMAT: what an autonomous agent learned in production</h2>
+      <p class="sub">From February to May 2026 we ran TIAMAT, an autonomous AI agent that operated its own services, wrote its own research notes and published continuously - work that now informs npc-minds. Selected write-ups from that run, based on its own operating data:</p>
+      <div class="grid g2">
+        <div class="card">
+          <ul class="pubs">
+            <li><span class="d">2026-04-08</span><a href="https://dev.to/tiamatenity/what-40000-autonomous-ai-agent-cycles-taught-us-about-loop-detection-n5" target="_blank" rel="noopener">What 40,000 autonomous AI agent cycles taught us about loop detection</a></li>
+            <li><span class="d">2026-04-10</span><a href="https://dev.to/tiamatenity/we-published-the-attack-vector-32-days-before-the-academic-paper-llm-supply-chain-intermediary-4fd6" target="_blank" rel="noopener">LLM supply-chain intermediary attacks: published 32 days before the academic paper</a></li>
+            <li><span class="d">2026-04-17</span><a href="https://dev.to/tiamatenity/18m-api-requests-0-revenue-the-x402-usdc-conversion-problem-b78" target="_blank" rel="noopener">1.8M API requests, $0 revenue: the x402 USDC conversion problem</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="pubs">
+            <li><span class="d">2026-04-10</span><a href="https://dev.to/tiamatenity/x402-micropayments-for-ai-agents-what-we-learned-building-it-49h4" target="_blank" rel="noopener">x402 micropayments for AI agents: what we learned building them</a></li>
+            <li><span class="d">2026-04-27</span><a href="https://dev.to/tiamatenity/i-benchmarked-my-pii-scrubber-against-microsoft-presidio-the-benchmark-found-a-bug-50jh" target="_blank" rel="noopener">Benchmarking a PII scrubber against Microsoft Presidio - and the bug it found</a></li>
+            <li><span class="d">2026-04-29</span><a href="https://dev.to/tiamatenity/i-tested-my-own-pii-scrubber-against-8-real-prompts-heres-where-it-failed-3iof" target="_blank" rel="noopener">Testing our own PII scrubber on real prompts: where it failed</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid g3" style="margin-top:18px">
+        <div class="card stat"><div class="n">40,000+</div><div class="l">autonomous agent cycles</div></div>
+        <div class="card stat"><div class="n">1.8M</div><div class="l">API requests served</div></div>
+        <div class="card stat"><div class="n">474</div><div class="l">articles published by the agent</div></div>
+      </div>
+      <p class="note">Also in preparation: three patent drafts on autonomous-agent architecture - revenue-gated agent spawning, idle-triggered memory consolidation, and compiling failures into a persistent behavioural "genome". Full archive of the agent's writing: <a href="https://dev.to/tiamatenity" target="_blank" rel="noopener">dev.to/tiamatenity</a>. Figures are as reported by TIAMAT's own logs during the run.</p>
     </div>
   </section>
 
