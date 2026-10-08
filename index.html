@@ -104,6 +104,11 @@ ul.pubs a:hover{color:var(--accent)}
 .stat .n{font-size:30px;font-weight:700;letter-spacing:-.5px;color:var(--accent)}
 .stat .l{color:var(--muted);font-size:14px}
 
+/* showreel */
+.showreel{margin:0 0 40px;max-width:900px}
+.showreel video{width:100%;display:block;border-radius:var(--radius);border:1px solid var(--line);background:#000;aspect-ratio:16/9}
+.showreel figcaption{color:var(--muted);font-size:13.5px;margin-top:10px;text-align:center}
+
 /* offers */
 .offer h3{font-size:19px}
 .price{margin:6px 0 12px;color:var(--muted);font-size:14px}
@@ -318,6 +323,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <div class="kicker">Services</div>
       <h2>What we can build for you</h2>
       <p class="sub">Fixed-scope packages with a written quote before any work starts. Prices are starting points; the quote is what you pay.</p>
+      <figure class="showreel">
+        <video controls preload="metadata" playsinline poster="media/showreel-poster.jpg">
+          <source src="media/showreel.mp4" type="video/mp4">
+        </video>
+        <figcaption>Sample reel — original AI-generated visuals, animated and cut to an original beat. The same pipeline builds your track's video.</figcaption>
+      </figure>
       <div class="grid g3">
         <div class="card offer">
           <h3>AI music video</h3>
