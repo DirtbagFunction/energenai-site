@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EnergenAI LLC — Wireless Power &amp; Applied AI</title>
-<meta name="description" content="EnergenAI LLC is a Michigan research and engineering company building patent-pending millimeter-wave wireless power and applied AI systems. UEI LBZFEH87W746.">
+<meta name="description" content="EnergenAI LLC is a Michigan research and engineering company building millimeter-wave wireless power, edge AI privacy and security, and applied AI systems. UEI LBZFEH87W746.">
 <meta property="og:title" content="EnergenAI LLC — Wireless Power &amp; Applied AI">
-<meta property="og:description" content="Patent-pending millimeter-wave wireless power, applied AI systems, and engineering services. Michigan LLC · UEI LBZFEH87W746.">
+<meta property="og:description" content="Millimeter-wave wireless power, edge AI privacy and security, applied AI systems, and engineering services. Michigan LLC · UEI LBZFEH87W746.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://energenai.org/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -154,6 +154,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <a href="#method">Method</a>
       <a href="#research">Research</a>
       <a href="#wireless">Wireless Power</a>
+      <a href="#security">Edge Security</a>
       <a href="#services">Services</a>
       <a href="#ai">Applied AI</a>
       <a href="#government">Government</a>
@@ -168,7 +169,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <div>
         <div class="eyebrow"><i></i>Research &amp; engineering · Michigan, USA</div>
         <h1>Power without wires.<br><span>Intelligence built in.</span></h1>
-        <p class="lede">EnergenAI LLC is an AI research and engineering company. We build generative-agent systems, apply a measurement-first AI methodology to energy research — starting with our patent-pending millimeter-wave wireless power system — and bring the same engineering to commercial and government customers.</p>
+        <p class="lede">EnergenAI LLC is an AI research and engineering company. We build generative-agent systems, apply a measurement-first AI methodology to energy and edge-security research — starting with our millimeter-wave wireless power system — and bring the same engineering to commercial and government customers.</p>
         <div class="cta">
           <a class="btn primary" href="#building">What we're building</a>
           <a class="btn ghost" href="#services">Services &amp; pricing</a>
@@ -294,7 +295,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <div class="wrap split">
       <div>
         <div class="kicker">Flagship R&amp;D</div>
-        <h2>Compact wireless power for battery-operated devices <span class="badge">Patent pending</span></h2>
+        <h2>Compact wireless power for battery-operated devices <span class="badge">In R&amp;D</span></h2>
         <p class="sub">Inductive charging only works when a device sits on a pad. EnergenAI's system is designed to deliver power across a room: a phased-array transmitter forms steerable millimeter-wave beams, and a compact receiver inside the device converts them back to regulated DC.</p>
         <ul class="ticks">
           <li><b>Beam-steered delivery.</b> An electronically steerable phased array directs energy at authenticated receivers and follows them as they move.</li>
@@ -311,9 +312,46 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
           <tr><td>Receiver</td><td>Compact antenna array, Schottky high-frequency rectifier, buck-boost regulation</td></tr>
           <tr><td>Output</td><td class="mono">5 V · 9 V · 12 V DC</td></tr>
           <tr><td>Input</td><td>Standard household AC (110 / 220 V)</td></tr>
-          <tr><td>Status</td><td>Research &amp; development · patent pending</td></tr>
+          <tr><td>Status</td><td>Research &amp; development</td></tr>
         </table>
         <p class="note">Figures are design targets for the system under development, not certified product specifications.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="security">
+    <div class="wrap">
+      <div class="kicker">Edge privacy &amp; security R&amp;D</div>
+      <h2>Stopping covert data harvesting before it leaves the building <span class="badge">In development</span></h2>
+      <p class="sub">Connected devices report far more than their owners realise, and the usual defences inspect traffic in the cloud, which means sending it somewhere else first. Our approach runs the machine learning at the network edge: traffic is classified on local hardware, and no data leaves the network to be analysed.</p>
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div>
+          <h3>Edge ML inference</h3>
+          <p>On-device neural networks classify network traffic in real time on constrained hardware, so analysis happens where the data already is.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Unified threat classification</h3>
+          <p>One inference pipeline covers privacy and security together, telling a manufacturer's own data collection apart from a third party compromising the same device.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+          <h3>Behavioural baselines</h3>
+          <p>Each device gets a communication profile, so anomalous exfiltration, beaconing and coordinated cross-device tracking stand out as they happen.</p>
+        </div>
+      </div>
+      <div class="grid g2" style="margin-top:18px">
+        <div class="card">
+          <h3>SENTINEL</h3>
+          <p>A network appliance for autonomous detection and prevention of covert IoT data harvesting: ML traffic classification with no cloud dependency, protecting every device on the network from one box.</p>
+          <p class="note">Status: in development</p>
+        </div>
+        <div class="card">
+          <h3>Sentinel Edge</h3>
+          <p>The same protection on a phone. A quantized ML model classifies connection metadata through Android's VPN service, with no deep packet inspection and no root access required.</p>
+          <p class="note">Status: in development</p>
+        </div>
       </div>
     </div>
   </section>
@@ -398,6 +436,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <div class="facts">
         <div class="fact"><div class="k">Entity</div><div class="v">EnergenAI LLC</div></div>
         <div class="fact"><div class="k">UEI</div><div class="v mono">LBZFEH87W746</div></div>
+        <div class="fact"><div class="k">NAICS</div><div class="v mono">541715 · 541519</div></div>
         <div class="fact"><div class="k">Organized</div><div class="v">Michigan LLC</div></div>
         <div class="fact"><div class="k">Contact</div><div class="v"><a href="#contact">Contact form</a></div></div>
       </div>
@@ -407,6 +446,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
           <ul class="ticks">
             <li>Wireless power transfer and RF/millimeter-wave system design</li>
             <li>AI control systems and autonomous agents</li>
+            <li>Edge AI privacy and network security (on-device ML traffic classification)</li>
             <li>Generative AI and machine learning pipelines</li>
             <li>Rapid prototyping and research &amp; development</li>
           </ul>
@@ -414,7 +454,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         <div class="card">
           <h3>Differentiators</h3>
           <ul class="ticks">
-            <li>Patent-pending wireless power technology developed in-house</li>
+            <li>Wireless power and edge-security technology developed in-house</li>
             <li>Hands-on engineering from concept to running system</li>
             <li>Small, fast team with direct access to the principal engineer</li>
           </ul>
@@ -438,7 +478,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
           <label>Topic
             <select name="topic">
               <option>AI music video</option><option>Private AI setup</option><option>AI automation &amp; bots</option>
-              <option>Wireless power / licensing</option><option>Government contracting</option><option>Something else</option>
+              <option>Wireless power / licensing</option><option>Edge security (SENTINEL)</option><option>Government contracting</option><option>Something else</option>
             </select>
           </label>
         </div>
