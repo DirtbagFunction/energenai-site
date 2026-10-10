@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EnergenAI LLC — Wireless Power &amp; Applied AI</title>
+<title>EnergenAI LLC — Privacy, Security &amp; Energy</title>
 <meta name="description" content="EnergenAI LLC is a Michigan research and engineering company building millimeter-wave wireless power, edge AI privacy and security, and applied AI systems. UEI LBZFEH87W746.">
-<meta property="og:title" content="EnergenAI LLC — Wireless Power &amp; Applied AI">
+<meta property="og:title" content="EnergenAI LLC — Privacy, Security &amp; Energy">
 <meta property="og:description" content="Millimeter-wave wireless power, edge AI privacy and security, applied AI systems, and engineering services. Michigan LLC · UEI LBZFEH87W746.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://energenai.org/">
@@ -139,6 +139,45 @@ ul.pubs a:hover{color:var(--accent)}
 
 footer{padding:30px 0;color:var(--muted);font-size:13.5px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+/* ---- depth pass (2026-10-10): imagery, glow, layered backgrounds, motion ---- */
+body{background:
+  radial-gradient(900px 600px at 85% -10%,rgba(54,226,196,.07),transparent 60%),
+  radial-gradient(700px 500px at -10% 40%,rgba(245,181,68,.04),transparent 60%),
+  var(--bg)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.35;
+  background-image:linear-gradient(rgba(147,160,180,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(147,160,180,.05) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 20%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000 30%,transparent 75%)}
+section{border-bottom:1px solid transparent;border-image:linear-gradient(90deg,transparent,var(--line),transparent) 1;position:relative}
+.kicker{display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:22px;height:1px;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+h2{background:linear-gradient(180deg,#fff,#c9d3e0);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2 .badge{-webkit-text-fill-color:var(--accent2)}
+.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 40%),var(--card);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 20px 40px -24px rgba(0,0,0,.8);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-4px);border-color:rgba(54,226,196,.35);
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 24px 48px -20px rgba(0,0,0,.9),0 0 0 1px rgba(54,226,196,.12),0 0 40px -10px rgba(54,226,196,.35)}
+.icon{box-shadow:0 0 24px -6px rgba(54,226,196,.6)}
+.stat .n{font-size:40px;text-shadow:0 0 28px rgba(54,226,196,.45)}
+.btn.primary{box-shadow:0 8px 30px -8px rgba(54,226,196,.6)}
+.btn.primary:hover{box-shadow:0 10px 40px -6px rgba(54,226,196,.8)}
+/* product imagery */
+.shot{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#05070a;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.9),0 0 60px -20px rgba(54,226,196,.35)}
+.shot img{display:block;width:100%;height:auto;transition:transform .8s ease}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{position:absolute;left:14px;bottom:12px;font:12px "JetBrains Mono",monospace;color:#cfe;letter-spacing:1px;
+  background:rgba(7,9,13,.6);backdrop-filter:blur(6px);padding:4px 10px;border-radius:999px;border:1px solid rgba(54,226,196,.25)}
+.hero-shot{transform:perspective(1400px) rotateY(-9deg) rotateX(3deg);transform-origin:left center}
+.hero-shot::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.08),transparent 40%);pointer-events:none}
+@media (max-width:900px){.hero-shot{transform:none}}
+.card .shot{margin:-26px -26px 22px;border:0;border-bottom:1px solid var(--line);border-radius:var(--radius) var(--radius) 0 0;box-shadow:none}
+.media-row{margin-bottom:28px}
+/* scroll reveal: only hidden when JS runs, so the page never loads blank */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.card,.shot img{transition:none}}
 </style>
 </head>
 <body>
@@ -175,38 +214,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
           <a class="btn ghost" href="#services">Services &amp; pricing</a>
         </div>
       </div>
-      <svg class="beam" viewBox="0 0 420 360" role="img" aria-label="A phased-array transmitter steering energy beams to devices">
-        <defs>
-          <linearGradient id="bm" x1="0" x2="1"><stop offset="0" stop-color="#36e2c4" stop-opacity=".55"/><stop offset="1" stop-color="#36e2c4" stop-opacity="0"/></linearGradient>
-          <radialGradient id="gl"><stop offset="0" stop-color="#36e2c4" stop-opacity=".5"/><stop offset="1" stop-color="#36e2c4" stop-opacity="0"/></radialGradient>
-        </defs>
-        <g opacity=".22" stroke="#93a0b4">
-          <circle cx="70" cy="180" r="90" fill="none"/><circle cx="70" cy="180" r="170" fill="none"/><circle cx="70" cy="180" r="250" fill="none"/>
-        </g>
-        <path d="M84 170 L390 70 L390 112 Z" fill="url(#bm)"/>
-        <path d="M84 186 L380 250 L372 292 Z" fill="url(#bm)" opacity=".75"/>
-        <g>
-          <rect x="40" y="120" width="40" height="120" rx="8" fill="#10151e" stroke="#36e2c4" stroke-width="2"/>
-          <g fill="#36e2c4">
-            <rect x="50" y="132" width="8" height="8" rx="2"/><rect x="62" y="132" width="8" height="8" rx="2"/>
-            <rect x="50" y="146" width="8" height="8" rx="2"/><rect x="62" y="146" width="8" height="8" rx="2"/>
-            <rect x="50" y="160" width="8" height="8" rx="2"/><rect x="62" y="160" width="8" height="8" rx="2"/>
-            <rect x="50" y="174" width="8" height="8" rx="2"/><rect x="62" y="174" width="8" height="8" rx="2"/>
-            <rect x="50" y="188" width="8" height="8" rx="2"/><rect x="62" y="188" width="8" height="8" rx="2"/>
-            <rect x="50" y="202" width="8" height="8" rx="2"/><rect x="62" y="202" width="8" height="8" rx="2"/>
-            <rect x="50" y="216" width="8" height="8" rx="2"/><rect x="62" y="216" width="8" height="8" rx="2"/>
-          </g>
-        </g>
-        <circle cx="388" cy="90" r="34" fill="url(#gl)"/>
-        <rect x="372" y="70" width="32" height="40" rx="6" fill="#10151e" stroke="#f5b544" stroke-width="2"/>
-        <path d="M384 84h8l-5 8h6l-9 11 3-8h-5z" fill="#f5b544"/>
-        <circle cx="378" cy="272" r="30" fill="url(#gl)"/>
-        <rect x="358" y="258" width="40" height="28" rx="6" fill="#10151e" stroke="#f5b544" stroke-width="2"/>
-        <path d="M372 266h8l-5 7h6l-9 9 3-7h-5z" fill="#f5b544"/>
-        <text x="40" y="270" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">PHASED ARRAY TX</text>
-        <text x="300" y="138" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">RX · tracked</text>
-        <text x="296" y="318" fill="#93a0b4" font-family="JetBrains Mono, monospace" font-size="11">RX · tracked</text>
-      </svg>
+      <figure class="shot hero-shot"><img src="media/sentinel.jpg" width="1600" height="900" alt="Render of the SENTINEL edge security appliance at the centre of a home network, blocking one device's data stream (red) while trusted connections (teal) flow" fetchpriority="high"><figcaption>SENTINEL · in development</figcaption></figure>
     </div>
   </section>
 
@@ -224,6 +232,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         </ul>
       </div>
       <div class="card">
+        <figure class="shot"><img src="media/agents.jpg" width="1600" height="900" loading="lazy" alt="Render of a network of generative agents, nodes linked by glowing connections"></figure>
         <table class="spec">
           <tr><td>Use cases</td><td>Game worlds with living populations; social and psychological simulation research</td></tr>
           <tr><td>Agent loop</td><td>Observe → rate importance → reflect with cited evidence → plan → converse</td></tr>
@@ -305,6 +314,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
         </ul>
       </div>
       <div class="card">
+        <figure class="shot"><img src="media/wireless.jpg" width="1600" height="900" loading="lazy" alt="Render of a phased-array transmitter steering two millimeter-wave beams to separate receivers"></figure>
         <table class="spec">
           <tr><td>Frequency band</td><td class="mono">95–300 GHz (millimeter-wave)</td></tr>
           <tr><td>Design range</td><td>Up to 3 m</td></tr>
@@ -343,11 +353,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       </div>
       <div class="grid g2" style="margin-top:18px">
         <div class="card">
+          <figure class="shot"><img src="media/sentinel.jpg" width="1600" height="900" loading="lazy" alt="Render of the SENTINEL appliance connected to the devices on a network"></figure>
           <h3>SENTINEL</h3>
           <p>A network appliance for autonomous detection and prevention of covert IoT data harvesting: ML traffic classification with no cloud dependency, protecting every device on the network from one box.</p>
           <p class="note">Status: in development</p>
         </div>
         <div class="card">
+          <figure class="shot"><img src="media/phone.jpg" width="1600" height="900" loading="lazy" alt="Render of a phone running Sentinel Edge, its screen showing a blocked connection among allowed ones"></figure>
           <h3>Sentinel Edge</h3>
           <p>The same protection on a phone. A quantized ML model classifies connection metadata through Android's VPN service, with no deep packet inspection and no root access required.</p>
           <p class="note">Status: in development</p>
@@ -609,6 +621,16 @@ form.addEventListener("submit", async e => {
     else { reset(j.error || "Couldn't send - please try again."); }
   } catch (err) { reset("Couldn't reach the server - please try again in a moment."); }
 });
+</script>
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add("js");
+  var els=[].slice.call(document.querySelectorAll("main section:not(.hero) .wrap > *, main section:not(.hero) .card"));
+  els.forEach(function(e){e.classList.add("reveal")});
+  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}})},{rootMargin:"0px 0px -8% 0px"});
+  els.forEach(function(e){io.observe(e)});
+})();
 </script>
 </body>
 </html>
