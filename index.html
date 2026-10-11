@@ -528,7 +528,7 @@ document.getElementById("yr").textContent = new Date().getFullYear();
 /* Contact form. The company address is NOT on this page: messages go to a Google Apps Script that mails the
    account it was deployed from. A press-and-hold check gates sending; while you hold, the browser also solves a
    small proof-of-work the server re-checks (cheap once for a person, costly at spam volume). */
-const FORM_URL = "";                                  // the Apps Script web-app URL (…/exec) once deployed
+const FORM_URL = "https://script.google.com/macros/s/AKfycbzXU96XLvNgXY8QUjEeHj7ShBxYyy0qQx9qXV2PCiaXcinESXPtb6cgStpE5OgSzeko/exec";                                  // the Apps Script web-app URL (…/exec) once deployed
 const HOLD_MS = 1500, PREFIX = "0000";
 const T0 = Date.now();
 const form = document.getElementById("cf"), hold = document.getElementById("hold"),
